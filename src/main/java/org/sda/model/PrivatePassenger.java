@@ -1,6 +1,7 @@
 package org.sda.model;
 
 public class PrivatePassenger extends Passenger {
+    private static final Long id = 546151616L;
     private boolean isPrivate;
     private String personalIDCode;
 
