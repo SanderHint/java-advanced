@@ -12,6 +12,8 @@ public class Dog {
     private String race;
     private float weight;
 
+    private Muzzle muzzle;
+
     public Dog(String name, int age, boolean isMale, String race, float weight) {
         this.name = name;
         this.age = age;
@@ -44,6 +46,14 @@ public class Dog {
 
         }
         this.weight = weight;
+    }
+
+    public Muzzle getMuzzle() {
+        return muzzle;
+    }
+
+    public void setMuzzle(Muzzle muzzle) {
+        this.muzzle = muzzle;
     }
 
     @Override

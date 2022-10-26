@@ -17,6 +17,8 @@ public class Person {
     private String phoneNumber;
     private String address;
 
+    protected boolean isAlive;
+
     //All arguments Constructor
     public Person(Long id, String firstName, String lastName, String email, String phoneNumber, String address) {
         this.id = id;
@@ -25,7 +27,9 @@ public class Person {
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.address = address;
-    }
+
+        }
+
 
     // Üarameterized constructor
     public Person(Long id, String address) {
@@ -90,7 +94,13 @@ public class Person {
     public void setAddress(String address) {
         this.address = address;
     }
+    protected boolean isAlive() {
+        return isAlive;
+    }
 
+    protected void setAlive(boolean alive) {
+        this.isAlive = alive;
+    }
 // ToString
     @Override
     public String toString() {
