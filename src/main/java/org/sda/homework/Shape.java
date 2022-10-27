@@ -9,30 +9,26 @@ public class Shape {
      * Create a Shape class.
      * a) Add fields, create constructor, getters and setters.
      * b) Create classes Rectangle and Circle. Both of them should inherit class Shape.
-     * Which fields and methods are common? -------------------------------- KAs selleks peaks kasutama Enumit???
+     * Which fields and methods are common?
      */
 
-    private int width;
-    private int height;
+   float area;
+   float circumference;
 
-    public Shape(int width, int height) {
-        this.width = width;
-        this.height = height;
+    public float getArea() {
+        return area;
     }
 
-    public int getWidth() {
-        return width;
+    public void setArea(float area) {
+        this.area = area;
     }
 
-    public void setWidth(int width) {
-        this.width = width;
+    public float getCircumference() {
+        return circumference;
     }
 
-    public int getHeight() {
-        return height;
+    public void setCircumference(float circumference) {
+        this.circumference = circumference;
     }
 
-    public void setHeight(int height) {
-        this.height = height;
-    }
 }

@@ -9,8 +9,8 @@ public class Rectangle extends Shape {
 
 //Constructor
 
-    public Rectangle(int width, int height, float perimeter, float area) {
-        super(width, height);
+    public Rectangle(float perimeter, float area) {
+
         this.perimeter = perimeter;
         this.area = area;
     }

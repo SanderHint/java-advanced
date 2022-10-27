@@ -6,8 +6,8 @@ public class Circle extends Shape {
    private float diameter;
 
    //Constructor
-    public Circle(int width, int height, float radius, float diameter) {
-        super(width, height);
+    public Circle(float radius, float diameter) {
+
         this.radius = radius;
         this.diameter = diameter;
     }
