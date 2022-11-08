@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
         //LAMBDA EXPRESSION
         //Predicate
-        Person person = new Person("Vinod", "John", 20);
+        Person person = new Person("Sander", "Hintsov", "SanderH",20);
         Predicate<Person> personTest = test -> test.getAge() > 20; //lambda expression
         System.out.println(personTest.test(person));
 
@@ -45,7 +45,7 @@ public class Main {
         System.out.println(toSquare.apply(4)); // apply() should be called always
 
         //OPTIONAL
-        Person person3 = new Person("Tony", "Stark", 54);
+        Person person3 = new Person("Tony", "Stark","Tony" , 54);
 
         Optional<Person> optionalPerson = Optional.of(person3);
 
@@ -126,6 +126,25 @@ public class Main {
                 .sorted(Comparator.reverseOrder())
                 .forEach(System.out::println);
 
+
+
+        //NESTED CLASS
+        //Non-static
+        Person person4 = new Person("Helar Marek", "Rangooski", "helar", 85);
+        System.out.println(person4.getUsername()); //outer class method call
+
+        Person.Employee employee = person4.new Employee();
+        employee.username(); //Inner class method call
+        System.out.println(person4.getUsername());
+
+        //Static
+        Person person5 = new Person("Ivo", "kukk", "Ivo", 37);
+        System.out.println(person5.getUsername());
+
+        Person.Customer customer = new Person.Customer(); // Difference in the object instantitation
+        customer.username(person5);
+        System.out.println(person5.getUsername());
+
     }
 
 
@@ -140,8 +159,8 @@ public class Main {
     //orELse example
     private static Person getRandomPerson() {
         // Optional<Person> optionalPerson = Optional.empty();
-        Optional<Person> optionalPerson = Optional.of(new Person("Captain", "Estonia", 33));
-        Person person2 = new Person("Bruce", "Wayne", 35); //Backup subst.
+        Optional<Person> optionalPerson = Optional.of(new Person("Captain", "Estonia","captain", 33));
+        Person person2 = new Person("Bruce", "Wayne", "bruce", 35); //Backup subst.
 
         return optionalPerson.orElse(person2);
     }
