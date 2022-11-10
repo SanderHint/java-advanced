@@ -79,8 +79,6 @@ public class StreamsHomework {
         numbersList.stream()
                 .sorted(Comparator.reverseOrder())
                 .forEach(System.out::println);
-
-
     }
 }
 
