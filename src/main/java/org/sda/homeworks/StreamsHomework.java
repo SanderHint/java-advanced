@@ -65,7 +65,8 @@ public class StreamsHomework {
 
         // Remove first and last letter, sort and print names.
         System.out.println("Names with first and last letter removed");
-
+        List<String> removeLetter = Arrays.asList("John", "Sarah", "Mark", "Tyla", "Ellisha", "Eamonn");
+        removeLetter.stream().map(name -> name.substring(1, name.length()-1)).sorted().forEach(name -> System.out.println(name + " "));
 
 
 
